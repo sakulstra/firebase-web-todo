@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { TodoListContainer } from './../components'
 
 const Todo = () => (
     <div>
         <Link to="/">Back to home</Link>
-        <p>At some point in this tutorial i'll render the todos!</p>
+        <TodoListContainer />
     </div>
 );
 

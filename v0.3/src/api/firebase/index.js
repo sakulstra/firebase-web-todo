@@ -8,7 +8,7 @@ const config = {
 };
 firebase.initializeApp(config);
 
-const db = firebase.database();
+export const db = firebase.database();
 db.ref('todos').set({});
 db.ref('todos').push({text: 'dummy todo text 1'});
 db.ref('todos').push({text: 'dummy todo text 2'});

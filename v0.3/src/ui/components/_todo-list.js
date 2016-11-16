@@ -1,13 +1,17 @@
 import React, { PropTypes } from 'react';
+import _ from 'lodash';
 import { TodoListItem } from './';
+import { todosListContainer } from './../../api/firebase/todos';
 
-export const TodoList = ({ container: { list: todos } }) => (
-    <div>
-        {todos.map(todo => (
-            <TodoListItem text={todo.text} />
-        ))}
-    </div>
-);
+export const TodoList = ({ container: { list : todos } }) => {
+    return (
+        <div>
+            {todos ? todos.map(todo => (
+                <TodoListItem text={todo.text} />
+            )) : null}
+        </div>
+    );
+}
 
 TodoList.propTypes = {
     container: PropTypes.shape({
@@ -20,4 +24,4 @@ TodoList.propTypes = {
 };
 
 // TODO: yep this will change later
-export default TodoList;
+export default todosListContainer(TodoList);
