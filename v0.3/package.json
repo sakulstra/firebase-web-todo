@@ -9,8 +9,10 @@
   },
   "dependencies": {
     "firebase": "^3.6.1",
+    "firebase-nest": "^0.1.2",
     "lodash": "^4.17.2",
     "mobx": "^2.6.2",
+    "mobx-firebase-store": "^0.1.19",
     "mobx-react": "^3.5.9",
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
