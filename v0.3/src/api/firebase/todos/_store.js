@@ -1,6 +1,7 @@
 import MobxFirebaseStore from 'mobx-firebase-store';
 import {db} from './../';
 
+// key to define subscription for nesting
 const allKey = 'allTodos';
 class store extends MobxFirebaseStore {
     constructor() {
@@ -20,4 +21,5 @@ class store extends MobxFirebaseStore {
     }
 }
 
+// export with new keyword to fire initialisation on import
 export default new store();

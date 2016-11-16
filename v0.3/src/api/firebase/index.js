@@ -6,9 +6,14 @@ const config = {
     storageBucket: "react-todos-474bc.appspot.com",
     messagingSenderId: "806317374387"
 };
-firebase.initializeApp(config);
+const app = firebase.initializeApp(config);
+// export all needed firebase functionality here to avoid double initialization
+export default app;
+export const db = app.database();
+export const auth = app.auth();
+export const storage = app.storage();
 
-export const db = firebase.database();
+// add some initial data - remove this in a later step
 db.ref('todos').set({});
 db.ref('todos').push({text: 'dummy todo text 1'});
 db.ref('todos').push({text: 'dummy todo text 2'});
